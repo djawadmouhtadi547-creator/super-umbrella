@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>سهل تجارتك</title><style>
+@font-face{font-family:SG;src:url(fonts/sg.ttf);font-weight:300 700}
+@font-face{font-family:TJ;src:url(fonts/tj4.ttf);font-weight:400}
+@font-face{font-family:TJ;src:url(fonts/tj5.ttf);font-weight:500}
+@font-face{font-family:TJ;src:url(fonts/tj7.ttf);font-weight:700 900}
+:root{--gr:#22c58b;--rd:#f87171}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{background:var(--bg);color:var(--tx);font-family:SG,TJ,sans-serif;display:flex;flex-direction:column;font-size:15px}
+#hd{display:flex;align-items:center;gap:12px;padding:14px 16px 4px}
+.logo{width:42px;height:42px;border-radius:14px;background:var(--ac);color:#0b0f14;display:grid;place-items:center;flex:none}
+#hd b{display:block;font-size:17px}small,.mu,label{color:var(--mu)}
+main{flex:1;overflow:auto;padding:12px 16px 20px}
+nav{display:flex;gap:4px;padding:8px;background:var(--card);border-top:1px solid var(--line)}
+nav button{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 2px;border:0;border-radius:14px;background:none;color:var(--mu);font:inherit;font-size:11px}
+nav button.on{background:rgba(var(--rgb),.15);color:var(--ac)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;margin-bottom:12px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+input,select{width:100%;background:var(--in);border:1px solid var(--line);color:var(--tx);border-radius:14px;padding:14px;font:inherit;margin-bottom:10px;outline:0}
+label{display:block;font-size:13px;margin:6px 2px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--ac);color:#0b0f14;border:0;border-radius:16px;padding:15px;font:inherit;font-weight:700;width:100%}
+.btn.g2{background:var(--in);color:var(--tx);border:1px solid var(--line)}
+.btn.sm{width:auto;padding:11px 16px;border-radius:14px;white-space:nowrap}
+h1{font-size:24px}.val{font-size:20px;font-weight:700;margin-top:6px}
+.hero{position:relative;overflow:hidden;border-radius:26px;padding:20px;color:#fff;background:var(--ac) linear-gradient(135deg,rgba(255,255,255,.28),rgba(0,0,0,.22));margin-bottom:12px}
+.hero:before{content:'';position:absolute;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.15);top:-50px;inset-inline-start:-40px}
+.hero .big{font-size:36px;font-weight:700;margin:8px 0;position:relative}
+.chip{display:inline-block;background:rgba(0,0,0,.2);border-radius:20px;padding:6px 12px;font-size:12px;margin:2px 0;margin-inline-end:6px;position:relative}
+.g2c{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.av{width:44px;height:44px;border-radius:14px;background:rgba(var(--rgb),.15);color:var(--ac);display:grid;place-items:center;font-weight:700;font-size:18px;flex:none}
+.opt{display:flex;align-items:center;justify-content:space-between;padding:18px;border:1px solid var(--line);border-radius:16px;margin-bottom:10px;background:var(--card)}
+.opt.sel{border-color:var(--ac);background:rgba(var(--rgb),.1)}
+.rd{width:24px;height:24px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center}
+.opt.sel .rd{background:var(--ac);color:#0b0f14}
+.pg{display:flex;gap:8px;margin:6px 0 20px}.pg i{flex:1;height:4px;border-radius:4px;background:var(--line)}.pg i.on{background:var(--ac)}
+.sw{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:center}
+.bs{height:46px;border:2px solid;border-radius:14px;display:grid;place-items:center;color:var(--ac);margin-bottom:4px}
+.ac{display:flex;gap:10px;flex-wrap:wrap}
+.dot{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:#0b0f14;border:2px solid transparent}.dot.sel{border-color:#fff}
+.chipb{padding:9px 14px;border:1px solid var(--line);border-radius:12px;background:var(--in);color:var(--mu);text-align:center}.chipb.sel{border-color:var(--ac);color:var(--ac)}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.ch{justify-content:flex-start;gap:8px;color:var(--mu);margin-bottom:12px}
+.si{position:absolute;inset-inline-start:14px;top:14px;color:var(--mu)}
+.lk{color:var(--ac);font-size:13px}
+.bars{display:flex;gap:6px;height:130px;margin-top:14px}.bar{flex:1;display:flex;flex-direction:column;text-align:center}
+.bar .c{flex:1;display:flex;align-items:flex-end;justify-content:center}.bar i{width:60%;background:var(--ac);border-radius:6px 6px 0 0;min-height:3px}.bar small{font-size:10px;margin-top:4px}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:flex-end;z-index:5}
+.sheet{background:var(--card);width:100%;border-radius:24px 24px 0 0;padding:20px;max-height:90%;overflow:auto}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+#ts{position:fixed;bottom:90px;inset-inline:0;margin:auto;width:max-content;max-width:90%;background:var(--ac);color:#0b0f14;padding:10px 18px;border-radius:14px;font-weight:700;opacity:0;transition:.3s;pointer-events:none;z-index:9}
+</style></head><body><header id="hd"></header><main id="m"></main><nav id="nv"></nav><div id="md"></div><div id="ts"></div>
+<script>
+const T={
+tag:['دفتر ديونك الرقمي: امسح الباركود، سجّل الدين على الزبون، وتابع أموالك.','Your digital debt book: scan barcodes, record debts, track your money.','Votre carnet de dettes numérique : scannez, enregistrez les dettes, suivez votre argent.'],
+welcome:['مرحباً بك في','Welcome to','Bienvenue dans'],step:['الخطوة','Step','Étape'],of:['من','of','sur'],
+pickLang:['اختر لغة التطبيق','Choose app language','Choisissez la langue'],next:['التالي','Next','Suivant'],start:['ابدأ الآن','Get started','Commencer'],
+s2t:['عرّفنا على متجرك','Tell us about your store','Parlez-nous de votre commerce'],s2d:['تظهر هذه المعلومات داخل التطبيق، ويمكنك تغييرها لاحقاً.','Shown inside the app; you can change it later.','Affiché dans l’app ; modifiable plus tard.'],
+storeName:['اسم المتجر','Store name','Nom du magasin'],storePh:['مثال: متجر النور','e.g. Al Nour Store','ex. Magasin Al Nour'],phoneOpt:['رقم هاتفك · اختياري','Your phone · optional','Votre téléphone · facultatif'],
+s3t:['اختر مظهرك','Pick your look','Choisissez votre style'],s3d:['لون الخلفية ولون التمييز — كل شيء قابل للتغيير في أي وقت.','Background and accent colors — all changeable anytime.','Fond et couleur d’accent — modifiables à tout moment.'],
+bgc:['لون الخلفية','Background','Fond'],acc:['لون التمييز','Accent color','Couleur d’accent'],
+night:['ليل أزرق','Midnight','Nuit'],char:['فحمي','Charcoal','Charbon'],forest:['غابة','Forest','Forêt'],violet:['بنفسجي','Violet','Violet'],brown:['بني داكن','Dark brown','Brun foncé'],sand:['رملي','Sand','Sable'],mist:['ضبابي','Mist','Brume'],paper:['ورق','Paper','Papier'],
+nd:['لوحة التحكم','Dashboard','Tableau de bord'],nc:['الزبائن','Customers','Clients'],nk:['الكاشير','Cashier','Caisse'],np:['المنتجات','Products','Produits'],ns:['الإعدادات','Settings','Réglages'],
+due:['إجمالي الديون المستحقة','Total outstanding debt','Total des dettes dues'],cn:['زبون','customers','clients'],ts:['مبيعات اليوم','Today’s sales','Ventes du jour'],
+open:['افتح الكاشير','Open cashier','Ouvrir la caisse'],addc:['أضف زبوناً','Add customer','Ajouter un client'],col:['المحصّل','Collected','Encaissé'],
+top:['أكبر المدينين','Top debtors','Plus gros débiteurs'],all:['عرض الكل','View all','Voir tout'],ch:['الديون في آخر 7 أيام','Debt in the last 7 days','Dettes des 7 derniers jours'],
+rec:['أحدث الحركات','Latest activity','Dernières opérations'],pay:['تسديد','Payment','Paiement'],debt:['دين','Debt','Dette'],
+newc:['زبون جديد','New customer','Nouveau client'],tdebt:['مجموع الديون','Total debts','Total des dettes'],sc:['ابحث بالاسم أو الهاتف','Search by name or phone','Rechercher nom ou téléphone'],
+owes:['عليه','Owes','Doit'],clr:['لا دين','No debt','Aucune dette'],nocl:['لا زبائن بعد','No customers yet','Aucun client'],name:['الاسم','Name','Nom'],phone:['رقم الهاتف','Phone','Téléphone'],
+idebt:['دين مبدئي (اختياري)','Initial debt (optional)','Dette initiale (facultatif)'],
+on:['تسجيل على','Recording on','Enregistrer pour'],nocu:['بدون زبون','No customer','Sans client'],
+scan:['امسح باركود','Scan barcode','Scanner un code'],scans:['وجّه الكاميرا نحو الباركود','Point the camera at the barcode','Dirigez la caméra vers le code'],
+bcph:['الباركود ثم Enter','Barcode then Enter','Code puis Entrée'],add:['إضافة','Add','Ajouter'],
+cart:['السلة','Cart','Panier'],ce:['السلة فارغة','Cart is empty','Panier vide'],ces:['امسح منتجاً للبدء','Scan a product to start','Scannez un produit'],tot:['الإجمالي','Total','Total'],rs:['تسجيل البيع','Record sale','Enregistrer la vente'],
+newp:['منتج جديد','New product','Nouveau produit'],npn:['منتج','products','produits'],sp:['ابحث بالاسم أو الباركود','Search by name or barcode','Rechercher nom ou code'],nop:['لا منتجات بعد','No products yet','Aucun produit'],
+nops:['تُضاف المنتجات تلقائياً عند مسح باركود جديد في الكاشير.','Products are added automatically when a new barcode is scanned in the cashier.','Les produits sont ajoutés automatiquement lors du scan d’un nouveau code en caisse.'],
+pn:['اسم المنتج','Product name','Nom du produit'],bc:['الباركود','Barcode','Code-barres'],pr:['السعر','Price','Prix'],
+store:['المتجر','Store','Magasin'],curc:['رمز العملة','Currency symbol','Symbole monétaire'],curs:['يُستخدم لعرض كل المبالغ','Used to display all amounts','Utilisé pour tous les montants'],
+look:['المظهر','Appearance','Apparence'],lang:['اللغة','Language','Langue'],mydata:['بياناتي','My data','Mes données'],mv:['حركة','transactions','opérations'],
+xfer:['نقل البيانات','Transfer data','Transfert des données'],xd:['احفظ نسخة من بياناتك في ملف، أو استورد نسخة لنقلها إلى هاتف آخر.','Save your data to a file, or import one to move to another phone.','Enregistrez vos données dans un fichier ou importez-en un pour changer de téléphone.'],
+exp:['تصدير نسخة','Export backup','Exporter'],imp:['استيراد نسخة','Import backup','Importer'],iw:['سيتم استبدال البيانات الحالية بالنسخة المستوردة. متابعة؟','Current data will be replaced by the imported backup. Continue?','Les données actuelles seront remplacées. Continuer ?'],
+about:['حول التطبيق','About','À propos'],abt:['إدارة ديون الزبائن وكاشير بالباركود.','Customer debt management and barcode cashier.','Gestion des dettes clients et caisse à code-barres.'],
+amt:['المبلغ','Amount','Montant'],note:['ملاحظة','Note','Note'],ok:['حفظ','Save','Enregistrer'],cancel:['إلغاء','Cancel','Annuler'],hist:['السجل','History','Historique'],
+dc:['حذف الزبون','Delete customer','Supprimer le client'],dc2:['اضغط مرة أخرى للتأكيد','Tap again to confirm','Appuyez à nouveau'],left:['المتبقي','Balance','Reste'],
+nsc:['المسح غير متاح هنا','Scanning isn’t available here','Scan indisponible'],bad:['ملف غير صالح','Invalid file','Fichier invalide'],sold:['تم تسجيل البيع','Sale recorded','Vente enregistrée']};
+const TH={night:['#0a0e17','#111828','#1f2a3d','#172033','#f1f5f9','#8794a8'],char:['#0e0e10','#171719','#27272b','#212125','#f4f4f5','#9a9aa2'],forest:['#07130f','#0f1f19','#1d3a2f','#1a2f27','#eef7f2','#8aa99b'],violet:['#0e0a17','#171026','#2a1f45','#231a38','#f3eefc','#9d90b8'],brown:['#120d08','#1d150e','#3a2a1b','#2a1f15','#f8f0e6','#a89580'],sand:['#fbf5e8','#fffcf4','#e8dcc0','#f3ead3','#2b2417','#8a7d62'],mist:['#eef2f7','#ffffff','#dbe3ee','#f1f5f9','#0f172a','#64748b'],paper:['#f4f4f6','#ffffff','#e2e2e8','#f1f1f4','#18181b','#71717a']};
+const AC=['#f0b429','#22c58b','#ff6b4a','#a78bfa','#38bdf8','#ff6b8b','#a3e635'],BG=Object.keys(TH);
+const IC={grid:'<rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/>',
+users:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/>',
+scan:'<path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2M7 12h10"/>',
+box:'<path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3.3 7L12 12l8.7-5M12 22V12"/>',
+sliders:'<path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/>',
+plus:'<path d="M12 5v14M5 12h14"/>',search:'<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>',
+phone:'<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>',
+cl:'<path d="M15 18l-6-6 6-6"/>',cr:'<path d="M9 18l6-6-6-6"/>',up:'<path d="M7 17L17 7M8 7h9v9"/>',
+rcpt:'<path d="M4 2v20l3-2 3 2 3-2 3 2 3-2V2l-3 2-3-2-3 2-3-2z"/><path d="M12 7v10M15 9h-4.5a1.5 1.5 0 0 0 0 3h3a1.5 1.5 0 0 1 0 3H9"/>',
+wallet:'<path d="M20 12V8H6a2 2 0 0 1 0-4h12v4M4 6v12a2 2 0 0 0 2 2h14v-4"/><path d="M18 12a2 2 0 0 0 0 4h4v-4z"/>',
+trend:'<path d="M22 7l-8.5 8.5-5-5L2 17M16 7h6v6"/>',check:'<path d="M20 6L9 17l-5-5"/>',
+globe:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/>',
+store:'<path d="M3 9l1-5h16l1 5M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0M5 12v9h14v-9"/>',
+palette:'<circle cx="12" cy="12" r="10"/><circle cx="8" cy="10" r="1"/><circle cx="12" cy="7" r="1"/><circle cx="16" cy="10" r="1"/>',
+db:'<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/>',
+info:'<circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>',user:'<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+trash:'<path d="M3 6h18M8 6V4h8v2M6 6l1 15h10l1-15"/>',swap:'<path d="M7 4L3 8l4 4M3 8h14M17 20l4-4-4-4M21 16H7"/>'};
+const $=s=>document.querySelector(s),esc=s=>String(s==null?'':s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+const I=(n,s=20)=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${IC[n]}</svg>`;
+const ld=()=>{try{return JSON.parse(localStorage.getItem('sht'))}catch(e){return null}};
+let S=ld()||{lang:'ar',store:'',phone:'',cur:'د.ج',bg:'night',ac:0,done:0,C:[],P:[],X:[]};
+const save=()=>{try{localStorage.setItem('sht',JSON.stringify(S))}catch(e){}};
+let page='d',sel=null,st=0,cart=[],cc='',qc='',qp='',MO=0;
+const L=()=>['ar','en','fr'].indexOf(S.lang),t=k=>(T[k]||[])[L()]||k,N=()=>S.lang=='ar'?'سهل تجارتك':'Sahl Tijaratak',LC=()=>({ar:'ar-DZ',en:'en-GB',fr:'fr-FR'}[S.lang]);
+const fm=n=>{const p=Math.abs(n).toFixed(2).split('.');return (n<0?'-':'')+p[0].replace(/\B(?=(\d{3})+(?!\d))/g,'\u202f')+','+p[1]+'\u00a0'+S.cur};
+const bal=id=>S.X.filter(x=>x.cid==id).reduce((s,x)=>s+(x.type=='p'?-x.amt:x.amt),0),cname=id=>(S.C.find(c=>c.id==id)||{}).name,sum=a=>a.reduce((s,x)=>s+x.amt,0);
+function theme(){const h=TH[S.bg],a=AC[S.ac],r=document.documentElement;['bg','card','line','in','tx','mu'].forEach((k,i)=>r.style.setProperty('--'+k,h[i]));r.style.setProperty('--ac',a);r.style.setProperty('--rgb',[1,3,5].map(i=>parseInt(a.substr(i,2),16)).join(','));r.lang=S.lang;r.dir=S.lang=='ar'?'rtl':'ltr'}
+const head=(a,b,c)=>`<div class="row" style="margin-bottom:14px"><div><h1>${a}</h1><small>${b}</small></div>${c}</div>`;
+const ch=(i,k)=>`<div class="row ch">${I(i,16)}<b>${t(k)}</b></div>`;
+const bgPick=()=>`<label>${t('bgc')}</label><div class="sw">${BG.map(k=>`<div onclick="S.bg='${k}';save();rr()"><div class="bs" style="background:${TH[k][1]};border-color:${S.bg==k?'var(--ac)':TH[k][2]}">${S.bg==k?I('check',16):''}</div><small>${t(k)}</small></div>`).join('')}</div>`;
+const accPick=()=>`<label>${t('acc')}</label><div class="ac">${AC.map((c,i)=>`<span class="dot ${S.ac==i?'sel':''}" style="background:${c}" onclick="S.ac=${i};save();rr()">${S.ac==i?I('check',16):''}</span>`).join('')}</div>`;
+const rr=()=>draw();
+function draw(){theme();if(!S.done)return onb();
+$('#hd').style.display=$('#nv').style.display='';
+$('#hd').innerHTML=`<div class="logo">${I('scan',22)}</div><div><b>${esc(S.store||N())}</b><small>${N()}</small></div>`;
+$('#nv').innerHTML=[['d','grid'],['c','users'],['k','scan'],['p','box'],['s','sliders']].map(([k,i])=>`<button class="${page==k?'on':''}" onclick="go('${k}')">${I(i,22)}<span>${t('n'+k)}</span></button>`).join('');
+$('#m').innerHTML=sel?custPage():({d:dash,c:custs,k:cash,p:prods,s:sets})[page]();
+if(page=='c'&&!sel)lc();if(page=='p'&&!sel&&S.P.length)lp()}
+const go=k=>{page=k;sel=null;draw()};
+function onb(){$('#hd').style.display=$('#nv').style.display='none';
+const ar=S.lang=='ar',bars=[0,1,2].map(i=>`<i class="${i<=st?'on':''}"></i>`).join('');
+const body=[`<p class="mu" style="margin-bottom:12px">${t('pickLang')}</p>`+[['ar','العربية'],['en','English'],['fr','Français']].map(([c,n])=>`<div class="opt ${S.lang==c?'sel':''}" onclick="S.lang='${c}';save();draw()"><b>${n}</b><span class="rd">${S.lang==c?I('check',14):''}</span></div>`).join(''),
+`<label>${t('storeName')}</label><input id="sn" value="${esc(S.store)}" placeholder="${t('storePh')}"><label>${t('phoneOpt')}</label><input id="sp" inputmode="tel" value="${esc(S.phone)}" placeholder="00 00 00 0555">`,
+bgPick()+'<div style="height:14px"></div>'+accPick()][st];
+$('#m').innerHTML=`<div class="row" style="justify-content:flex-start;gap:12px;margin-bottom:16px"><div class="logo">${I('scan',22)}</div><div><b style="font-size:18px">${N()}</b><br><small>v1.0</small></div></div><div class="pg">${bars}</div>
+<div style="color:var(--ac);font-size:13px">${I(['globe','store','palette'][st],14)} ${t('step')} ${st+1} ${t('of')} 3</div><h1 style="margin:8px 0">${st?t('s'+(st+1)+'t'):t('welcome')+' '+N()}</h1><p class="mu" style="margin-bottom:20px">${st?t('s'+(st+1)+'d'):t('tag')}</p>${body}
+<div class="row" style="margin-top:24px"><button class="btn" onclick="nx()">${st==2?t('start'):t('next')} ${ar?'←':'→'}</button>${st?`<button class="btn sm g2" style="padding:15px 18px" onclick="st--;draw()">${ar?'→':'←'}</button>`:''}</div>`}
+function nx(){if(st==1){S.store=$('#sn').value.trim();S.phone=$('#sp').value.trim()}if(st<2)st++;else{S.done=1;page='d'}save();draw()}
+const rcRow=x=>{const p=x.type=='p';return `<div class="row" style="padding:10px 0;border-top:1px solid var(--line)"><div class="row" style="gap:12px"><div class="av" style="${p?'background:rgba(34,197,139,.15);color:var(--gr)':''}">${I(p?'up':'rcpt',18)}</div><div><b>${esc(cname(x.cid)||t('nocu'))}</b><br><small>${p?t('pay'):esc(x.note||t('debt'))} · ${new Date(x.t).toLocaleDateString(LC())}</small></div></div><b style="color:${p?'var(--gr)':'var(--tx)'}">${p?'-':'+'}${fm(x.amt)}</b></div>`};
+const item=c=>{const b=bal(c.id);return `<div class="card row" style="margin-bottom:8px" onclick="sel=${c.id};draw()"><div class="row" style="gap:12px"><div class="av">${esc((c.name[0]||'?').toUpperCase())}</div><div><b>${esc(c.name)}</b><br><small>${c.phone?I('phone',12)+' '+esc(c.phone):''}</small></div></div><div class="row" style="gap:8px"><div style="text-align:end"><b style="color:${b>0?'var(--ac)':'var(--gr)'}">${fm(b)}</b><br><small>${b>0?t('owes'):t('clr')}</small></div><span class="mu">${I(S.lang=='ar'?'cl':'cr',16)}</span></div></div>`};
+function dash(){const day=new Date().setHours(0,0,0,0),due=S.C.reduce((s,c)=>s+bal(c.id),0),ts=sum(S.X.filter(x=>x.type=='d'&&x.t>=day)),col=sum(S.X.filter(x=>x.type=='p')),
+top=S.C.map(c=>({c,b:bal(c.id)})).filter(x=>x.b>0).sort((a,b)=>b.b-a.b).slice(0,3),ds=[...Array(7)].map((_,i)=>day-(6-i)*864e5),
+vs=ds.map(d=>sum(S.X.filter(x=>x.type=='d'&&x.cid&&x.t>=d&&x.t<d+864e5))),mx=Math.max(...vs,1),rc=S.X.slice().sort((a,b)=>b.t-a.t).slice(0,5);
+return `<div class="hero"><small style="color:#fff;opacity:.9;position:relative">${I('wallet',15)} ${t('due')}</small><div class="big">${fm(due)}</div><span class="chip">${S.C.length} ${t('cn')}</span><span class="chip">${t('ts')}: ${fm(ts)}</span></div>
+<div class="g2c"><button class="btn" onclick="go('k')">${I('scan')} ${t('open')}</button><button class="btn g2" onclick="addC()">${I('plus')} ${t('addc')}</button></div>
+<div class="g2c" style="margin:12px 0">${[['users',t('nc'),S.C.length],['trend',t('ts'),fm(ts)],['wallet',t('col'),fm(col)],['box',t('np'),S.P.length]].map(([i,l,v])=>`<div class="card" style="margin:0"><div class="row"><small>${l}</small><span style="color:var(--ac)">${I(i,16)}</span></div><div class="val">${v}</div></div>`).join('')}</div>
+<div class="card"><div class="row" style="margin-bottom:10px"><b class="mu">${t('top')}</b><a class="lk" onclick="go('c')">${t('all')}</a></div>${top.map(x=>item(x.c)).join('')||`<p class="mu">${t('nocl')}</p>`}</div>
+<div class="card"><b>${t('ch')}</b><div class="bars">${ds.map((d,i)=>`<div class="bar"><div class="c"><i style="height:${vs[i]/mx*100}%"></i></div><small>${new Date(d).toLocaleDateString(LC(),{weekday:'short'})}</small></div>`).join('')}</div></div>
+<div class="card"><div class="mu" style="margin-bottom:6px">${t('rec')}</div>${rc.map(rcRow).join('')}</div>`}
+function custs(){return head(t('nc'),`${t('tdebt')}: <b style="color:var(--ac)">${fm(S.C.reduce((s,c)=>s+bal(c.id),0))}</b>`,`<button class="btn sm" onclick="addC()">${I('plus',18)} ${t('newc')}</button>`)+`<div style="position:relative"><input style="padding-inline-start:44px" placeholder="${t('sc')}" value="${esc(qc)}" oninput="qc=this.value;lc()"><span class="si">${I('search',18)}</span></div><div id="cl"></div>`}
+function lc(){const q=qc.toLowerCase();$('#cl').innerHTML=S.C.filter(c=>(c.name+' '+(c.phone||'')).toLowerCase().includes(q)).sort((a,b)=>bal(b.id)-bal(a.id)).map(item).join('')||`<p class="mu" style="text-align:center;margin-top:20px">${t('nocl')}</p>`}
+function addC(){modal(t('newc'),`<label>${t('name')}</label><input id="f1"><label>${t('phone')}</label><input id="f2" inputmode="tel"><label>${t('idebt')}</label><input id="f3" type="number" inputmode="decimal">`,()=>{const n=$('#f1').value.trim();if(!n)return;const id=Date.now(),a=parseFloat($('#f3').value)||0;S.C.push({id,name:n,phone:$('#f2').value.trim()});if(a>0)S.X.push({id:id+1,cid:id,type:'d',amt:a,note:'',t:Date.now()});save();cm();draw()})}
+function custPage(){const c=S.C.find(x=>x.id==sel);if(!c){sel=null;return dash()}
+return `<div class="row" style="justify-content:flex-start;gap:12px;margin-bottom:14px"><button class="btn sm g2" onclick="sel=null;draw()">${S.lang=='ar'?'→':'←'}</button><div class="av">${esc((c.name[0]||'?').toUpperCase())}</div><div><h1 style="font-size:20px">${esc(c.name)}</h1><small>${esc(c.phone||'')}</small></div></div>
+<div class="card"><small>${t('left')}</small><div class="val" style="color:var(--ac);font-size:28px">${fm(bal(c.id))}</div></div>
+<div class="g2c" style="margin-bottom:14px"><button class="btn" onclick="mvT('d')">${I('plus',18)} ${t('debt')}</button><button class="btn g2" onclick="mvT('p')">${I('up',18)} ${t('pay')}</button></div>
+<b>${t('hist')}</b>${S.X.filter(x=>x.cid==c.id).sort((a,b)=>b.t-a.t).map(rcRow).join('')}
+<button class="btn" style="background:var(--rd);color:#fff;margin-top:20px" onclick="dc(this)">${I('trash',18)} ${t('dc')}</button>`}
+function mvT(ty){modal(t(ty=='d'?'debt':'pay'),`<label>${t('amt')}</label><input id="f1" type="number" inputmode="decimal"><label>${t('note')}</label><input id="f2">`,()=>{const a=parseFloat($('#f1').value);if(!(a>0))return;S.X.push({id:Date.now(),cid:sel,type:ty,amt:a,note:$('#f2').value.trim(),t:Date.now()});save();cm();draw()})}
+function dc(b){if(!b.dataset.s){b.dataset.s=1;b.textContent=t('dc2');return}S.C=S.C.filter(x=>x.id!=sel);S.X=S.X.filter(x=>x.cid!=sel);save();sel=null;draw()}
+function cash(){const tot=cart.reduce((s,i)=>s+i.p*i.q,0);
+return `<div class="card row"><div class="row" style="gap:12px"><div class="av" style="border:1px dashed var(--line);background:none;color:var(--mu)">${I('user',20)}</div><div><small>${t('on')}</small><br><b>${esc(cc?cname(+cc):t('nocu'))}</b></div></div><select style="width:auto;max-width:46%;margin:0" onchange="cc=this.value;draw()"><option value="">${t('nocu')}</option>${S.C.map(c=>`<option value="${c.id}" ${cc==c.id?'selected':''}>${esc(c.name)}</option>`).join('')}</select></div>
+<div class="hero" style="display:flex;align-items:center;gap:14px;color:#0b0f14" onclick="scan()"><div class="av" style="background:rgba(0,0,0,.15);color:#0b0f14;width:52px;height:52px;position:relative">${I('scan',26)}</div><div style="position:relative"><b style="font-size:18px">${t('scan')}</b><br><small style="color:#0b0f14;opacity:.75">${t('scans')}</small></div></div>
+<div class="card row" style="padding:6px 12px"><input id="bc" inputmode="numeric" style="border:0;margin:0;background:none" placeholder="${t('bcph')}" onkeydown="if(event.key=='Enter')ab()"><button class="btn sm g2" onclick="ab()">${t('add')}</button></div>
+<div class="card"><div class="row"><b>${t('cart')}</b><span class="chip" style="background:var(--in);color:var(--mu)">${cart.length}</span></div>${cart.length?cart.map((i,n)=>`<div class="row" style="padding:10px 0;border-top:1px solid var(--line);margin-top:8px"><div><b>${esc(i.n)}</b><br><small>${fm(i.p)}</small></div><div class="row" style="gap:8px"><button class="btn sm g2" onclick="qy(${n},-1)">−</button><b>${i.q}</b><button class="btn sm g2" onclick="qy(${n},1)">+</button></div></div>`).join('')+`<div class="row" style="margin:14px 0"><b>${t('tot')}</b><span class="val">${fm(tot)}</span></div><button class="btn" onclick="sell()">${t('rs')}</button>`:`<div style="text-align:center;padding:24px 0 10px"><b>${t('ce')}</b><br><small>${t('ces')}</small></div>`}</div>`}
+function scan(){if(window.Android)Android.scan();else toast(t('nsc'))}
+const onScan=c=>bar(c),ab=()=>{const v=$('#bc').value.trim();if(v)bar(v)};
+function push(p){const i=cart.find(x=>x.id==p.id);i?i.q++:cart.push({id:p.id,n:p.n,p:p.p,q:1});draw()}
+function bar(code){const p=S.P.find(x=>x.bc==code);if(p)return push(p);
+modal(t('newp'),`<label>${t('bc')}</label><input id="f3" value="${esc(code)}"><label>${t('pn')}</label><input id="f1"><label>${t('pr')}</label><input id="f2" type="number" inputmode="decimal">`,()=>{const n=$('#f1').value.trim(),pr=parseFloat($('#f2').value);if(!n||!(pr>=0))return;const q={id:Date.now(),n,bc:$('#f3').value.trim(),p:pr};S.P.push(q);save();cm();push(q)})}
+function qy(n,d){cart[n].q+=d;if(cart[n].q<=0)cart.splice(n,1);draw()}
+function sell(){if(!cart.length)return;S.X.push({id:Date.now(),cid:cc?+cc:0,type:'d',amt:cart.reduce((s,i)=>s+i.p*i.q,0),note:cart.map(i=>i.n+'×'+i.q).join('، ').slice(0,60),t:Date.now()});cart=[];save();toast(t('sold'));draw()}
+function prods(){return head(t('np'),`${S.P.length} ${t('npn')}`,`<button class="btn sm" onclick="ep()">${I('plus',18)} ${t('newp')}</button>`)+(S.P.length?`<div style="position:relative"><input style="padding-inline-start:44px" placeholder="${t('sp')}" value="${esc(qp)}" oninput="qp=this.value;lp()"><span class="si">${I('search',18)}</span></div><div id="pl"></div>`:`<div class="card" style="text-align:center;padding:40px 20px"><div class="av" style="margin:0 auto 14px;width:64px;height:64px">${I('box',28)}</div><b>${t('nop')}</b><p class="mu" style="margin:6px 0 16px">${t('nops')}</p><button class="btn sm" style="margin:auto" onclick="ep()">${t('newp')}</button></div>`)}
+function lp(){const q=qp.toLowerCase();$('#pl').innerHTML=S.P.filter(p=>(p.n+' '+p.bc).toLowerCase().includes(q)).map(p=>`<div class="card row" style="margin-bottom:8px" onclick="ep(${p.id})"><div><b>${esc(p.n)}</b><br><small>${esc(p.bc)}</small></div><div class="row"><b style="color:var(--ac)">${fm(p.p)}</b><span class="mu" onclick="event.stopPropagation();dp(${p.id},this)">${I('trash',18)}</span></div></div>`).join('')}
+function dp(id,b){if(!b.dataset.s){b.dataset.s=1;b.style.color='var(--rd)';return}S.P=S.P.filter(x=>x.id!=id);save();draw()}
+function ep(id){const p=S.P.find(x=>x.id==id)||{};modal(t(id?'pn':'newp'),`<label>${t('pn')}</label><input id="f1" value="${esc(p.n||'')}"><label>${t('bc')}</label><input id="f3" value="${esc(p.bc||'')}"><label>${t('pr')}</label><input id="f2" type="number" inputmode="decimal" value="${p.p==null?'':p.p}">`,()=>{const n=$('#f1').value.trim(),pr=parseFloat($('#f2').value);if(!n||!(pr>=0))return;const o={id:p.id||Date.now(),n,bc:$('#f3').value.trim(),p:pr};id?Object.assign(p,o):S.P.push(o);save();cm();draw()})}
+function sets(){const tx=S.X.length;
+return head(t('ns'),esc(S.store||N()),'')+`<div class="card">${ch('store','store')}<label>${t('storeName')}</label><input value="${esc(S.store)}" oninput="S.store=this.value;save()"><label>${t('phone')}</label><input inputmode="tel" value="${esc(S.phone)}" oninput="S.phone=this.value;save()"><label>${t('curc')}</label><input value="${esc(S.cur)}" oninput="S.cur=this.value;save()"><small>${t('curs')}</small><div class="ac" style="margin-top:10px">${['د.ج','د.ت','د.م','ر.س','د.إ','€','$','F CFA'].map(c=>`<span class="chipb ${S.cur==c?'sel':''}" onclick="S.cur='${c}';save();draw()">${c}</span>`).join('')}</div></div>
+<div class="card">${ch('palette','look')}${bgPick()}<div style="height:14px"></div>${accPick()}</div>
+<div class="card">${ch('globe','lang')}<div class="g3">${[['ar','العربية'],['en','English'],['fr','Français']].map(([c,n])=>`<div class="chipb ${S.lang==c?'sel':''}" style="padding:14px 4px;font-weight:700" onclick="S.lang='${c}';save();draw()">${n}</div>`).join('')}</div></div>
+<div class="card">${ch('swap','xfer')}<p class="mu" style="margin-bottom:14px;font-size:13px">${t('xd')}</p><div class="g2c"><button class="btn" onclick="xp()">${t('exp')}</button><button class="btn g2" onclick="xi()">${t('imp')}</button></div></div>
+<div class="card">${ch('db','mydata')}<div class="g3">${[[S.C.length,'cn'],[S.P.length,'npn'],[tx,'mv']].map(([v,k])=>`<div class="card" style="margin:0;text-align:center;background:var(--in)"><b style="font-size:20px">${v}</b><br><small>${t(k)}</small></div>`).join('')}</div></div>
+<div class="card">${ch('info','about')}<p class="mu" style="font-size:13px">${N()} — ${t('abt')}</p><small style="display:block;margin-top:8px">${N()} · v1.0</small></div>`}
+function xp(){const j=JSON.stringify({app:'sht',v:1,S});if(window.Android)Android.exportData(j);else{const a=document.createElement('a');a.href='data:application/json;charset=utf-8,'+encodeURIComponent(j);a.download='sahl-tijaratak.json';a.click()}}
+function xi(){if(window.Android)Android.importData();else toast(t('nsc'))}
+function onImport(s){try{const d=JSON.parse(s).S;if(!Array.isArray(d.C)||!Array.isArray(d.P)||!Array.isArray(d.X))throw 0;modal(t('imp'),`<p style="margin-bottom:14px">${t('iw')}</p>`,()=>{S=d;S.done=1;save();cm();page='d';sel=null;draw()})}catch(e){toast(t('bad'))}}
+function modal(h,b,fn){MO=1;$('#md').innerHTML=`<div class="ov" onclick="if(event.target==this)cm()"><div class="sheet"><h3 style="margin-bottom:12px">${h}</h3>${b}<div class="row2"><button class="btn" id="ok">${t('ok')}</button><button class="btn g2" onclick="cm()">${t('cancel')}</button></div></div></div>`;$('#ok').onclick=fn;const f=$('#f1');if(f)f.focus()}
+const cm=()=>{MO=0;$('#md').innerHTML=''};
+function toast(m){const e=$('#ts');e.textContent=m;e.style.opacity=1;setTimeout(()=>e.style.opacity=0,2200)}
+function back(){if(MO){cm();return 1}if(!S.done&&st>0){st--;draw();return 1}if(S.done&&sel){sel=null;draw();return 1}if(S.done&&page!='d'){go('d');return 1}return 0}
+draw();
+</script></body></html>
